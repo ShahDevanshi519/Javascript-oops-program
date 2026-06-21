@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overloading</title>
+</head>
+<body>
+    <!-- Method Overloading: When One Class Consist Two Or More Than Two Method With Same Name But Different Parameter It Is Called Method Overloading
+     Javascript Doesn't Support The Concept Of Method Overloading. Becuase What happened If You Declare the method with the same name and different paramter
+     what js does it execute only last method and override the other methods. so if you want to use method overloading concept in js you can achive by 
+     default parameters,reset parameters or conditions. -->
+     <script>
+        class A{
+            sumofNumber(...nums){
+                let sum = 0;
+
+                for(let num of nums){
+                    sum +=num;
+                }
+
+                console.log(sum);
+            }
+        }
+
+        const obj = new A();
+        obj.sumofNumber(5,5);
+        obj.sumofNumber(5,5,5);
+        obj.sumofNumber(5,5,5,5);
+     </script>
+</body>
+</html>

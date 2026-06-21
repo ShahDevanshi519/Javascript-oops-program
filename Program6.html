@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarchical Inheritance</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            display1(){
+                console.log("Animal...");
+            }
+        }
+
+        class Dog extends Animal{
+            display2(){
+                console.log("Barking...");
+            }
+            
+        }
+
+        class Cat extends Animal{
+            display3(){
+                console.log("Meow...");
+            }
+        }
+
+        const d = new Dog();
+        d.display1();
+        d.display2();
+
+        const c = new Cat();
+        c.display1();
+        c.display3();
+    </script>
+</body>
+</html>

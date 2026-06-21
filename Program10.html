@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+</head>
+<body>
+    <!-- Abstraction means hiding implementation details and showing only essential functionality to the user. -->
+     <script>
+        class Bank{
+            #balance; //private variable;
+            constructor(balance){
+                this.#balance = balance;
+            }
+
+            deposite(amount){
+                if(amount > 0){
+                    this.#balance += amount;
+                }else{
+                    console.log("Add Proper Amount!");
+                }
+            }
+
+            withdraw(amount){
+                if(amount < 0){
+                    console.log("You can not add negeative amount!");
+                }else if(this.#balance < amount){
+                    console.log("You don't have sufficient balance!");
+                }else{
+                    this.#balance -= amount;
+                }
+            }
+
+            display(){
+                console.log("Balance Is = " + this.#balance);
+            }
+        }
+
+        const obj = new Bank(5000);
+
+        obj.display();
+        obj.deposite(2000);
+        obj.display();
+        obj.withdraw(1000);
+        obj.display();
+        // console.log(obj.#balance);//Error
+     </script>
+</body>
+</html>

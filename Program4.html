@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Inheritance</title>
+</head>
+<body>
+    <script>
+        class A{
+            constructor(name){
+                this.name = name;
+            }
+
+            display1(){
+                console.log("A Class Is Calling...")
+                console.log(this.name);
+            }
+        }
+
+        class B extends A{
+            constructor(name,age){
+                super(name);
+                this.age = age;
+            }
+
+            display2(){
+                console.log("B Class Is Calling...");
+                console.log(this.name);
+                console.log(this.age);
+            }
+        }
+
+        const b1 = new B("Devanshi",22);
+        b1.display1();
+        b1.display2();
+
+        const b2 = new B("Devanshi");
+        b2.display1();
+    </script>
+</body>
+</html>

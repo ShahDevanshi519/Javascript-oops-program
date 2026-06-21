@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameterized Constructor</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            constructor(name,salary){
+                this.name = name;
+                this.salary = salary;
+            }
+
+            display(){
+                console.log(this.name);
+                console.log(this.salary);
+            }
+        }
+
+        const e = new Employee("Devanshi",25000);
+        e.display();
+    </script>
+</body>
+</html>

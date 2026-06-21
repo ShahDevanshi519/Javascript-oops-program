@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Modifiers</title>
+</head>
+<body>
+    <script>
+        class A{
+            #amount
+            constructor(amount,name){
+                this.#amount = amount;
+                this.name = name;
+            }
+
+            _showDetails(){
+                console.log("Protected Method!");
+            }
+
+            display(){
+                console.log(this.#amount);
+                console.log(this.name);
+            }
+        }
+
+        class B extends A{
+            constructor(amount,name){
+                super(amount,name);
+            }
+            show(){
+                // console.log(this.amount);// It's not accessible
+                console.log(this.name);// It's accessible becuase it is public
+                this._showDetails();// It's is not accessible becuase of inhertiance.
+            }
+        }
+
+        const b = new B(5000,"D");
+
+        b.show();
+        b.display();
+
+
+    </script>
+</body>
+</html>

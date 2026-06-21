@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapulations</title>
+</head>
+<body>
+    <!-- Binding Data And Method Into The Single Units Called The Class. -->
+     <script>
+        class Bank{
+            constructor(balance){
+                this.balance = balance;
+            }
+
+            deposite(amount){
+                if(amount > 0){
+                    this.balance+=amount;
+                }else{
+                    console.log("Add Proper Amount!");
+                }
+                console.log("Deposite Amount Is = ",amount);
+                console.log("Your Current Balance Is = ",this.balance);
+            }
+
+            withdraw(amount){
+                if(this.balance > amount){
+                    this.balance -= amount;
+                }else{
+                    console.log("You don't have sufficient balance!");
+                }
+
+                console.log("Withdraw Amount Is = ",amount);
+                console.log("Your Current Balance Is = ",this.balance);
+            }
+        }
+
+        const obj = new Bank(5000);
+
+        obj.deposite(1000);
+        obj.withdraw(500);
+     </script>
+</body>
+</html>
