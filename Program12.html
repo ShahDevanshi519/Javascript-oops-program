@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutiple-Inheritance</title>
+</head>
+<body>
+    <!-- Mutiple Inheritance: When One Class Inherti Properties and methods of two or more than two parent class.
+     js does not support the concept of multiple inheritance beucase,
+     class A{
+        display(){
+        console.log("A Called!");
+        }
+     }
+
+     class B{
+        display(){
+        console.log("B Called!");
+        }
+     }
+
+     class C extends A,B{}
+
+     const obj = new C();
+     obj.display();// The Problem Is Which Display() method need to called it's give error...
+
+     if you want to use mutiple inhertiance in js than you can achive this using mixing.
+     -->
+     <script>
+        const A = {
+            display1(){
+                console.log("A Is Called!")
+            }
+        }
+
+        const B = {
+            display2(){
+                console.log("B Is Called!");
+            }
+        }
+
+        class C {}
+
+        Object.assign(C.prototype,A,B);
+
+        const obj = new C();
+        obj.display1();
+        obj.display2();
+     </script>
+</body>
+</html>
